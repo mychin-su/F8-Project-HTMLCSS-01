@@ -1,0 +1,652 @@
+* {
+    box-sizing: borderbox;
+}
+/* mau chu dao cua trang web dung chung nhieu lan nen dat buen de chung chung nhieu lan */
+:root {
+    --primary--color: #0f1b4c;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ================================Common: thanh phan dung chung ===========================*/
+a {
+    text-decoration: none;
+}
+
+.content {
+    width: 1110px;
+    max-width: calc(100% - 48px);
+    margin: auto;
+}
+/* nut dung chung co chieu rong 98px va chieu cao 50px  */
+.btn {
+    display: inline-block;
+    /* vi the a inline nen muon dung minwidth phai cho the inline thanh inline-block */
+    min-width: 98px;
+    /* cai nut co the co nhieu tu nen dung min with*/
+    background: var(--primary--color);
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ffffff;
+    padding: 18px 16px;
+    /* bao gom ca phan noi dung cong lai moi width height  */
+    /* chieu cao nut nen padding, padding trai phai de neu khi co nhieu tu thu nos van cach deu trai phai */
+}
+
+.btn:hover {
+    opacity: 0.9;
+    background-color: #b00819;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*  ==========Header========== */
+.header {
+    position: relative;
+    background: #e6f0ff;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-top: 38px;
+    /* neu su dung margin thi se bi
+    marginconsolap nen cach khac phuc dung padding  */
+}
+
+.navbar ul {
+    display: flex;
+    padding-left: 50px;
+    /* phan navigation viet o duoi da pading ben trai 
+    phan logo 14px nen chi can cach 50 px  */
+}
+
+.navbar .actions {
+    margin-left: auto;
+}
+
+.navbar ul a {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #4f5361;
+    padding: 8px 14px;
+    /* paading khong can in-line block cho cho inline a vi no khong qua cham voi cac phan tu xung quanh  */
+}
+
+.navbar ul a:hover {
+    background-color: #0bc4c2;
+    border-radius: 999px;
+}
+
+.navbar .action-link {
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: var(--primary--color);
+}
+
+.navbar .action-link:hover {
+    min-width: 3px;
+    padding: 13px 16px;
+    display: inline-block;
+    background-color: #0bc4c2;
+    border-radius: 999px;
+}
+
+/* nut dc thuong huong .btn chung nhung co chieu cao 40px khac btn */
+.navbar .action-btn {
+    border-radius: 8px;
+    padding: 13px 16px;
+    margin-left: 18px;
+}
+
+.hero {
+    margin-top: 130px;
+}
+
+/* dat do rong cho info de cac chu dung nhu trong hinh  width 51%= 559px (ti le) cua the cha la content 1110p = 100%*/
+.hero .info {
+    width: 51%;
+}
+
+.hero .sub-title {
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #687690;
+}
+
+.hero .title {
+    font-weight: 700;
+    font-size: 6.2rem;
+    line-height: 1.19;
+    color: #000336;
+    margin-top: 8px;
+}
+
+.hero .desc {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: #5a6473;
+    margin-top: 30px;
+}
+
+.hero .btn {
+    margin-top: 40px;
+    min-width: 170px;
+}
+
+.hero-img {
+    bottom: 0;
+    right: calc((100vw - 1110px) / 2 - 100px);
+    position: absolute;
+}
+/* =====Clients===== */
+.clients {
+    padding: 43px 0 64px;
+    margin-top: 79px;
+}
+
+.clients .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients .desc {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.25;
+    text-align: right;
+    color: #7d8589;
+}
+
+.row .desc {
+    margin-top: 19px;
+}
+
+.clients .image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 96px;
+}
+
+/* ==================================Guides=============================== */
+.guides {
+    padding: 93px 0 79px;
+    margin-top: 40px;
+}
+
+.guides .sub-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1;
+    text-align: center;
+    color: #000339;
+}
+
+.guides .sub-title::before {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* left 50% can chinh cho no nam giua conf transform dung de can theo do rong theo truc x cua thanh cach ben trai 50% */
+    content: "";
+    display: inline-block;
+    /* vi before la the inline nen ta dat width height nen co inline-block */
+    width: 41px;
+    height: 4px;
+    background: #000339;
+    border-radius: 12px;
+}
+
+.guides .desc {
+    width: 459px;
+    max-width: 100%;
+    /* de khi trinh duyet thu nho lai khong hien thanh cuon ngang */
+    margin: 20px auto 0;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    text-align: center;
+    color: #5a6473;
+}
+
+.list-guides {
+    justify-content: center;
+    display: flex;
+    margin-top: 70px;
+}
+
+.guides-item {
+    text-align: center;
+    /* can chu nam ow giua  */
+    margin: 0 70px;
+}
+
+.guides-item .title {
+    margin-top: 26px;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 1.1;
+    text-align: center;
+    color: #3b3c45;
+}
+
+.guides-item .link {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #0689ff;
+}
+
+.guides-item .arrow {
+    margin-left: 6px;
+}
+
+.guide-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.guide-cta .btn {
+    min-width: 170px;
+}
+
+/* =======================Features===================== */
+.feature {
+    background: #f5fafe;
+    margin-top: 41px;
+    padding: 110px 0;
+}
+
+.feature .sub-title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #000339;
+}
+
+.feature .row {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.feature .desc {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #5a6473;
+}
+
+.feature .link {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #0689ff;
+}
+
+.feature .link .arrow {
+    margin-left: 8px;
+}
+
+/* =========List-Feature==== */
+
+.feature .list {
+    margin-top: 70px;
+    gap: 30px;
+    /* tao khoang cach giua cac item 30px */
+    display: flex;
+}
+
+.feature .item {
+    background: #fff;
+    flex: 1;
+    border-radius: 12px;
+    /* 3 anh se bang nhau theo chieu ngang */
+}
+.feature .item .thumb {
+    width: 100%;
+    /* chieu rong 3 buc anh bang chieu rong cua khung nhin */
+    height: 227px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.feature .item .body {
+    padding: 17px 20px 24px;
+}
+
+.feature .item .title a {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #000339;
+}
+
+.feature .item .desc {
+    margin-top: 11px;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #a3a6ab;
+    word-break: break-all;
+}
+
+.feature .item .info {
+    margin-top: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.feature .item .label {
+    margin-left: 8px;
+    /* lable the inline nhung margin left van hoat dong */
+    font-weight: 500;
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+    color: #4d4d52;
+}
+
+.feature .icon {
+    margin-left: 23px;
+}
+
+.feature .item .icon:first-child {
+    margin-left: 0;
+}
+
+/* Starts */
+.stats {
+    margin-top: 75px;
+    padding: 50px 0;
+}
+
+.stats .content {
+    width: 1048px;
+}
+
+.stats .row {
+    display: flex;
+}
+
+.stats .img-block,
+.stats .info {
+    width: 50%;
+}
+
+.stats .img-block {
+    position: relative;
+}
+
+.stats .info {
+    padding: 79px 0 0 165px;
+}
+
+.stats-trend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 239px;
+    padding: 45px 22px 40px;
+    border-radius: 0px 0px 12px 12px;
+    background-color: #fff;
+}
+
+.stats-trend .value {
+    font-weight: 700;
+    font-size: 2.6rem;
+    letter-spacing: 0.01em;
+    color: #000339;
+}
+
+.stats-trend .icon {
+    margin-left: auto;
+}
+
+.stats-trend .desc {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #a7a7a7;
+}
+
+.stats-trend .separate {
+    height: 1.2px;
+    margin-top: 25px;
+    background: #e9e9e9;
+}
+
+.stats .avatar-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 14px;
+    margin-top: 26px;
+}
+
+.stats .avatar-group {
+    display: flex;
+}
+
+.stats .avatar {
+    width: 16px;
+    height: 16px;
+    margin-left: -3px;
+    object-fit: cover;
+    border-radius: 50%;
+    background: var(--bg-color, #fff);
+    font-weight: 450;
+    font-size: 0.7rem;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.stats .avatar:first-child {
+    margin-left: 0;
+}
+
+.stats .img-block .image {
+    margin-left: auto;
+    display: block;
+    width: 400px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.stats .sub-title {
+    position: relative;
+    width: 269px;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.29;
+    color: #000339;
+}
+
+.stats .sub-title::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: "";
+    display: block;
+    width: 41px;
+    height: 4px;
+    background: #000339;
+    border-radius: 12px;
+}
+
+.stats .info .desc {
+    width: 309px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #5a6473;
+}
+
+.stats .row-qty {
+    justify-content: space-between;
+    margin-top: 110px;
+    padding: 0 32px;
+}
+
+.stats .qty {
+    font-weight: 600;
+    font-size: 6.4rem;
+    color: #000000;
+}
+
+.stats .qty-desc {
+    margin-top: 24px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #7b8087;
+}
+/* ======Subcription============ */
+.subscription {
+    margin-top: 90px;
+}
+
+.subscription .body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 370px;
+    background: #063183;
+    border-radius: 20px;
+}
+
+.subscription .info {
+    width: 671px;
+    /* gioi han chu lai neu chu qua nhieu */
+    max-width: 100%;
+    /* dat kich thuoc khi thu nho man hinh */
+    padding: 0 80px;
+}
+
+.subscription .sub-title {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.subscription .desc {
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.88;
+    color: #ffffff;
+    opacity: 0.75;
+}
+
+.subscription .btn {
+    margin-top: 20px;
+    min-width: 151px;
+    background: #fff;
+    color: #002366;
+}
+
+.subscription .image {
+    position: absolute;
+    bottom: 0;
+    right: 221px;
+}
+/* ============FOOTER=============== */
+.footer {
+    margin-top: 55px;
+    padding: 50px 0 58px;
+}
+
+.footer .row {
+    display: flex;
+}
+
+.footer .row-top {
+    gap: 185px;
+}
+
+.footer .heading {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #1c1c1d;
+}
+
+.footer .list,
+.footer .desc {
+    margin-top: 42px;
+}
+
+.footer .item {
+    margin-top: 18px;
+}
+
+.footer .item a,
+.footer .desc {
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #7a7a7e;
+    white-space: nowrap;
+}
+
+.footer .desc {
+    white-space: normal;
+    line-height: 1.75;
+}
+
+.footer .social {
+    display: flex;
+    margin-top: 40px;
+}
+
+.footer .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 3px;
+}
+
+.footer .social-link:hover {
+    background-color: #ebebee;
+}
+
+.footer .row-bottom {
+    margin-top: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
+.footer .copyright {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: #c2c2c2;
+}
