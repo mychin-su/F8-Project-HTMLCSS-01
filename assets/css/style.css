@@ -65,10 +65,10 @@ a {
 }
 .hero-wrap {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     position: relative;
     background: #e6f0ff;
-    height: 100vh;
+    height: calc(100vh - 90px);
 }
 
 .navbar {
