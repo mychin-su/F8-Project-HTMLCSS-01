@@ -354,6 +354,8 @@ a {
     font-size: 2rem;
     line-height: 1.5;
     color: #000339;
+    display: flex;
+    justify-content: center;
 }
 
 .feature .item .desc {
