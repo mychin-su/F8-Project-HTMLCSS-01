@@ -71,6 +71,7 @@ a {
 .hero-wrap {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     position: relative;
     background: #e6f0ff;
     height: calc(100vh - 90px);
@@ -129,16 +130,12 @@ a {
     margin-left: 18px;
 }
 
-.hero {
-    margin-top: 130px;
-}
-
 /* dat do rong cho info de cac chu dung nhu trong hinh  width 51%= 559px (ti le) cua the cha la content 1110p = 100%*/
-.hero .info {
+.hero-wrap .info {
     width: 51%;
 }
 
-.hero .sub-title {
+.hero-wrap .sub-title {
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -146,7 +143,7 @@ a {
     color: #687690;
 }
 
-.hero .title {
+.hero-wrap .title {
     font-weight: 700;
     font-size: 6.2rem;
     line-height: 1.19;
@@ -154,7 +151,7 @@ a {
     margin-top: 8px;
 }
 
-.hero .desc {
+.hero-wrap .desc {
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 1.8rem;
@@ -162,7 +159,7 @@ a {
     margin-top: 30px;
 }
 
-.hero .btn {
+.hero-wrap .btn {
     margin-top: 40px;
     min-width: 170px;
 }
