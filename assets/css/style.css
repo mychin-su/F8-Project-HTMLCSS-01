@@ -55,7 +55,17 @@ a {
 }
 
 /*  ==========Header========== */
-.header {
+.fixed-header {
+    background: #e6f0ff;
+    padding-top: 26px;
+    position: sticky;
+    /* neo phan nav-bar con cua main  */
+    top: -26px;
+    z-index: 1;
+}
+.hero-wrap {
+    display: flex;
+    flex-direction: column ;
     position: relative;
     background: #e6f0ff;
     height: 100vh;
@@ -64,7 +74,7 @@ a {
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    padding: 12px 0;
     /* neu su dung margin thi se bi
     marginconsolap nen cach khac phuc dung padding  */
 }
