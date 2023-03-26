@@ -72,7 +72,6 @@ a {
     background: #e6f0ff;
     padding-top: 26px;
     position: sticky;
-    /* neo phan nav-bar con cua main  */
     top: -26px;
     z-index: 1;
 }
